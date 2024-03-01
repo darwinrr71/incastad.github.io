@@ -1,0 +1,1038 @@
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body {background:#FFFFFF;}
+
+.container_principal {
+	width:100%;
+	max-width: 1000px;
+	margin:0 auto;
+	overflow: hidden;
+}
+
+.main_bar {
+	display:none;
+}
+
+header {
+	width: 100%;
+}
+
+header .kontaktsup {
+	/*z-index:1000;*/
+	max-width: 1000px;
+	width:95%;
+	margin:0px auto;
+	overflow: hidden;
+}
+
+header  .kontaktsup .logo {
+	width: 20%;
+}
+
+header  .kontaktsup .logo img {
+	width: 70%;
+	height: auto;
+}
+
+header .kontaktsup .kontakt {
+	width: 75%;
+	float: left;
+}
+
+header .kontaktsup .kontakt a {
+	color: #699F48;
+	text-decoration: none;	
+	font-family: Verdana;
+	font-size: 16px;
+}
+
+header .kontaktsup .kontakt a span {
+	margin-right:10px;
+}
+
+header .kontaktsup .kontakt a:hover {
+	color: #395827;
+	border-bottom-style: solid;
+	border-bottom-color: #699F48;
+}
+
+header  .kontaktsup .logo, .kontaktsup .kontakt {
+	display: block;
+	float: left;
+}
+
+header .kontaktsup .kontakt #ring_oss, .kontaktsup .kontakt #maila_oss, .kontaktsup .kontakt #facebook, 
+		.kontaktsup .kontakt #twitter {
+	display: inline-block;
+	padding: 60px 20px;
+}
+/* propiedades para el menu de cabecera*/
+nav {
+	/*display: flex;*/
+	background:#699F48;
+	z-index: 9999;
+	max-width: 1000px;
+	width:95%;
+	margin:0px auto;
+	/*height: 57px;*/
+}
+/* Con list-style: none le quitamos las viñetas a todas
+	las opciones del menu y submenu */
+nav ul {
+	list-style:none;
+}
+/* son los items del menu */
+nav ul li {
+	display:inline-block;
+	position: relative;
+}
+/* es el texto del item del emnu de cabecera*/
+nav ul li a {
+	color: #fff;
+	display:block;
+	text-decoration:none;
+	padding: 18px;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+}
+/* es el icono del menu de cabecera*/
+nav ul li a span {
+	margin-right:10px;
+}
+/* cuando se posiciona en las opciones del menu
+	muestra el submenu*/
+nav ul li:hover .children {
+	display:block;
+}
+/* propiedades para todo el submenu*/
+nav ul li .children {
+	display: none;
+	background:#395827;
+	position: absolute;
+	width: 150%;
+	z-index:9999;
+	/*padding-left: 0px;*/
+}
+/* Son las items del menu*/
+nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+/* se resalta de color verde cuado se posiciona el 
+	mouse en item del submenu*/
+nav ul li .children li:hover {
+	background: #699F48;
+}
+/* es el texto del submenu*/
+nav ul li .children li a {
+	display: block;
+	font-weight: normal;
+	/*padding: 15px;*/
+}
+/* propiedades para los iconos del submenu*/
+nav ul li .children li a span {
+	/*float: right;*/
+	float:inline-end; /* mueve el icon al lado derecho final del item*/
+	position: relative;
+	top:3px;
+	padding: 0px;
+	/*margin-right:0;
+	margin-left:10px;*/
+}
+
+nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+
+.contenido {
+	display: block;
+	position: relative;
+	max-width:1000px;
+	z-index: 1;
+	width:95%;
+	margin:0px auto;
+	overflow: hidden;
+	font-family: Verdana;
+}
+
+/*---------------------*/
+/**** INICIO INDEX ****/
+/*-------------------*/
+
+/* inicio de slides */
+.slides_main {
+	display: block;
+	position: relative;
+	z-index: -1;
+	width:100%; /* antes 95%*/
+	max-width:1000px;
+	margin:10px auto;
+}
+
+.slides {
+	width:100%;
+}
+
+.slides img {
+	width:100%;
+}
+
+.slides h1 {
+	font-family: sans-serif;
+	font-style: italic;
+	color: #FFFFFF;
+	font-size: 30px; 
+	position: absolute; 
+	left: 60px;
+	top: 40px;
+	padding: 10px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.slidesjs-pagination {
+	background:#424242;
+	list-style:none;
+	overflow:hidden;
+}
+
+.slidesjs-pagination li {
+	float:left;
+}
+
+.slidesjs-pagination li a {
+	display:block;
+	padding:10px 20px;
+	color:#fff;
+	text-decoration:none;
+}
+
+.slidesjs-pagination li a:hover {
+	background:#000;
+}
+
+.slides .active {
+	background:#000;
+}
+
+.slidesjs-navigation{
+	background:#000;
+	color:#fff;
+	text-decoration:none;
+	display:inline-block;
+	padding:12.1px 20px;
+	float:right;
+}
+/* fin de slides */
+
+/*inicio de section */
+.section {
+	background:#FFFFFF;
+	z-index: -1;
+	max-width: 1000px;
+	width:100%; /* antes 95%*/
+	margin:0px auto;
+	/*font-family: Verdana;*/ /* el tipo de letra ya esta definido en el contenedor "contenido"*/
+	display: block;
+}
+
+.section_title {
+	margin-top:20px;
+	font-size: 18px;
+	color: #8F98A5;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.columns h2, .load-content-omoss h2, .load-content-priser h2, .section-acordeon h2 {
+	margin: 20px 0px 5px 0px;
+	font-size: 16px;
+	color: #333333;
+	/*text-align: justify;*/
+
+}
+
+.columns p, .load-content-omoss p, .load-content-priser p, .section-acordeon p {
+	font-size: 14px;
+	color: #333333;
+	/*text-align: justify;*/
+	line-height: 20px; /* espacion entre lineas de texto */
+}
+/* fin de section */
+
+/* inicio kontaktaoss*/
+.kontaktaoss {
+	max-width: 1000px;
+	width:100%; /* antes 95%*/	
+	margin:30px auto;
+	overflow: hidden;
+	/*font-family: Verdana;*/
+	background: #F7FBF4;
+	padding: 20px;
+	box-shadow: 0px 3px 20px #699F48;
+
+}
+
+.kontaktaoss h1{
+	font-size: 25px;
+	color: #000000;
+	padding-bottom: 20px;
+
+}
+
+form{
+	width: 40%;	
+	display: block;
+	float: left;
+	border: 1px solid #CCCCCC;
+	padding: 20px;
+}
+
+label{
+	font-size: 12px;
+	display: block;
+	width: 100%
+}
+
+textarea {
+	resize: vertical;
+	max-height: 300px;
+	min-height: 100px;
+}
+
+input, textarea, select {
+	margin-bottom: 20px;
+	width: 100%;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #CCCCCC;	
+}
+
+input:focus, textarea:focus select:focus{
+	border: 1px solid #1668C4;
+}
+
+input[type="submit"] {
+	margin-bottom: 0px;
+	background: #1668C4;
+	color: #FFFFFF;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	background: #4A88F4;
+	cursor: pointer;
+
+}
+
+.adress {
+	width: 50%;	
+	display: block;
+	float: right;
+	border: 1px solid #CCCCCC;
+	padding: 20px;
+	/*font-family: Verdana;*/
+	color: #000000;
+
+}
+
+.adress h2{
+	font-size: 25px;
+}
+
+.adress p {
+	font-size: 14px;
+	line-height:30px; /* espacion entre lineas de texto */
+	padding-bottom: 10px;
+}
+
+.adress p span {
+	font-weight: bold;
+}
+
+.mapa {
+	width: 50%;
+	display: block;
+	float: right;
+	border: 1px solid #CCCCCC;
+	padding: 20px;
+	margin-top :20px;
+}
+
+.mapa iframe {
+	width: 100%;
+}
+/* fin kontaktaoss*/
+/*---------------------*/
+/****  FIN INDEX   ****/
+/*-------------------*/
+
+
+/*---------------------*/
+/**** INICIO OM OSS, PRISER ***/
+/*-------------------*/
+
+.main-container {
+	display: block;
+	position: relative;
+	max-width:1000px;
+	width:20%;
+	float: left;
+	z-index: -1;
+	background:#395827;
+	margin-top: 10px;
+
+}
+
+.main-priser h2 {
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+	background: #699F48	
+}
+
+.main-omoss li, .main-priser li {
+	padding: 10px;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+.main-omoss li:hover, .main-priser li:hover {
+	background: #699F48;
+}
+
+.main-omoss li a, .main-priser li a {
+	color: #FFFFFF;
+	text-decoration:none;
+	padding: 10px;
+	font-size: 14px;
+}
+
+.load-content-omoss, .load-content-priser {
+	display: block;
+	position: relative;
+	max-width:1000px;
+	width:80%;
+	float: left;
+	z-index: -1;
+	padding-left: 20px;
+}
+
+.load-content-omoss img {
+	width: 100%;
+	height: auto;
+}
+
+/*---------------------*/
+/***** FIN OM OSS *****/
+/*-------------------*/
+
+.img-stadning {
+	max-width: 1000px;
+	width:95%;
+	margin:0px auto;
+}
+
+.img-stadning img {
+	padding: 10px;
+	width: 100%;
+	height: auto;
+	margin:0px auto;
+}
+
+/*--------------------------------------------------*/
+/****** HEMSTÄDNING, STORSTÄDNING... hela tjänter***/
+/*------------------------------------------------*/
+.section-acordeon{
+	background: #E0EDD9;
+	width: 100%;
+	margin: 10px auto 30px auto;
+	text-align: left;
+	font-family: verdana;
+}
+
+.section-acordeon label{
+	font-weight: bold;
+	padding: 10px 20px;
+	display: block;
+	cursor: pointer;
+	color: white;
+	line-height: 40px;
+	font-size: 16px;
+	background: rgba(0,0,0,0.4);
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+
+.section-acordeon label:hover{
+	background: rgba(122, 125, 150, 0.6);
+	color:black;
+	padding-left: 30px;
+	
+}
+
+.section-acordeon input[type="radio"]:checked + label,
+.section-acordeon input[type="radio"]:checked + label:hover{
+	background: rgba(255,255,255,0.9);
+	color: black;
+}
+
+.section-acordeon input{
+	display: none;
+}
+
+.section-acordeon .texto{
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	background-color: rgba(255,255,255,0.8);
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+
+.section-acordeon h2 {
+	padding: 20px;
+}
+
+.section-acordeon .texto p{
+	color: #333333;
+	line-height: 23px;
+	font-size: 14px;
+	padding-left: 50px;
+	font-family: verdana;
+}
+
+.section-acordeon input[type="radio"]:checked ~ .texto{
+	height: auto; /*230px*/
+}
+
+#nebaris{
+	background-color: #000;
+	color: white;
+	padding: 15px;
+	text-align: center;
+	margin-top: 120px;
+	font-family: helvetica;
+}
+
+#nebaris a{
+	color:rgb(178, 255, 178);
+}
+
+#nebaris a:hover{
+	color:white;
+}
+/*-------------------*/
+/** FIN HEMSTÄDNING***/
+/*-------------------*/
+
+/*---------------------------------------------------------*/
+/*-------- LISTA DE PRECIOS DE TODOS LOS SERVICIOS--------*/
+/*-------------------------------------------------------*/
+
+.load-content-priser{-webkit-font-smoothing:antialiased;}
+.load-content-priser{background:#FFFFFF repeat scroll 0 0;font: 12px/1.5em Verdana, Arial, Helvetica, sans-serif, "Arial Narrow";color:#656565;}
+img{border:0;}
+ul, li { list-style:none;margin: 0px;padding: 0px;}
+a{color:#fb7c03;text-decoration:none;}
+/*div { position:relative;} lo desactive por que esta dentro de un contenedor que ya tiene esta propiedad*/ 
+
+/*#menu-holder{margin:30px auto;width:80%;}*/
+#menu-holder{margin:20px auto;max-width:1000px;width:100%;}
+
+
+
+/***** PRICING TABLE *****/
+.price_table {width: 100%; /*100% dentro de load-content-priser*/
+	height: 100%; /*250px; /*100%;*/
+	font-size: 12px;
+	font-family: verdana, sans-serif;
+	font-weight: normal;
+	color: #444444;
+	position:relative; /*yo lo agregue para que no se descuadre en la media query moviles*/
+	display: inline-block; /*yo lo agregue por que se montaba el texto encima de las columnas*/
+}
+
+.price_table .price_time{
+	max-width: 1000px;
+	width: 16%; /*100% dentro de load-content-priser*/
+	height: auto; /*100%;*/	
+	position:relative; /*yo lo agregue para que no se descuadre en la media query moviles*/
+	display: inline-block; /*yo lo agregue por que se montaba el texto encima de las columnas*/
+	float: left;
+	margin-right: 5px;
+}
+.price_table .price_time_1{
+	max-width: 1000px;
+	width: 83%; /*100% dentro de load-content-priser*/
+	height: auto; /*100%;*/	
+	position:relative; /*yo lo agregue para que no se descuadre en la media query moviles*/
+	display: inline-block; /*yo lo agregue por que se montaba el texto encima de las columnas*/
+	float: left;
+}
+
+.price_table .price_time .column_1{
+	clear: both;
+	margin-bottom: 5px;
+	width: 100%
+}
+
+.price_table a{color: #444444;}
+.price_table .align_center{text-align: center;}
+
+.price_table .pack-title{font-family: 'Viga', arial, sans-serif;
+	font-size: 14px;
+	color: #217515;
+	text-shadow: 0 1px 0 rgba(125, 207, 61, 0.4);
+	margin-top:10px;}
+.price_table .price{
+font-family: 'Viga', arial, sans-serif;
+	font-size: 16px;
+color: #217515;
+	text-shadow: 0 1px 0 rgba(125, 207, 61, 0.4);
+	margin:10px 0px 5px 0px; /*lo cambie era 30 0 20 0 px*/
+	}
+.price_table .time{font-size: 14px;color: #217515;
+	text-shadow: 0 1px 0 rgba(125, 207, 61, 0.4);}	
+	
+/* --- header row 1 ---  */
+.price_table .column_1 .header_row_1{
+	height: 60px; /*45px*/
+	width: 100%;
+	padding: 5px 0px 0px 0px;
+	border-bottom: 1px solid #37752B;
+	background: #52A93E;
+	background: -webkit-gradient(linear, left top, left bottom, from(#52A93E), to(#469436));
+	background: -moz-linear-gradient(top, #52A93E,  #469436);
+	background: linear-gradient(#52A93E, #469436);
+	}
+
+/* --- header row 2 ---  */
+.price_table .column_1 .header_row_2{
+	height: 10%; /*100px;*/
+	width: 100%; /*100%;*/
+	padding: 5px 0px;
+	border-top: 1px solid #B0E287;
+	background: #7DCF3D;
+	background: -webkit-gradient(linear, left top, left bottom, from(#7DCF3D), to(#52A93E));
+	background: -moz-linear-gradient(top, #7DCF3D,  #52A93E);
+	background: linear-gradient(#7DCF3D, #52A93E);
+	}
+	
+.price_table .column_1{height: auto; /*100%;*/
+	float: left;
+	width: 19%; /*270px;*/
+   -webkit-transform: translate(0px, 0px);
+   -moz-transform: translate(0px, 0px);
+   -o-transform: translate(0px, 0px);
+   -ms-transform: translate(0px, 0px);
+   transform: translate(0px, 0px);
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+	}	
+
+/**** COLUMN HOVERS ****/
+.price_table .column_1:hover{
+	position: relative;
+	z-index: 100;
+	box-shadow: 5px 0px 25px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 5px 0px 25px rgba(0,0,0,0.7);
+	-moz-box-shadow: 5px 0px 25px rgba(0,0,0,0.7);
+	-webkit-transform: translate(-5px,-15px);
+   -moz-transform: translate(-5px,-15px);
+   -o-transform: translate(-5px,-15px);
+   -ms-transform: translate(-5px,-15px);
+   transform: translate(-5px,-15px);
+   -webkit-transition-delay: 0s;
+   -moz-transition-delay: 0s;
+   -o-transition-delay: 0s;
+   -ms-transition-delay: 0s;
+   transition-delay: 0s;
+	}
+
+.price_table .column_1:hover .header_row_1,	
+.price_table .column_1:hover .header_row_2,
+.price_table .column_1:hover .row_style_1,
+.price_table .column_1:hover .row_style_2,
+.price_table .column_1:hover .row_style_footer_1,
+.price_table .column_1:hover .row_style_footer_2
+{	padding-left: 5px;
+	padding-right: 5px;
+	}
+
+	
+/**** DATA ROWS  ****/
+.price_table .row_style_1,
+.price_table .row_style_2,
+.price_table .row_style_footer_1,
+.price_table .row_style_footer_2
+	{width: 100%;
+	height: auto; /*40px;*/
+	padding-top: 9px;
+	float: left;
+	}
+.price_table .row_style_footer_1, .price_table .row_style_footer_2{padding: 10px 0px;}
+	
+.price_table .row_style_1, .price_table .row_style_footer_1{background-color: #F9F8F0;}
+.price_table .row_style_2, .price_table .row_style_footer_2{background-color: #F0EED9;}
+
+.price_table .row_style_1 span, .price_table .row_style_2 span{position:relative;font-size:14px;}
+
+
+/**** BUY NOW BUTTON ****/
+.buy_now
+	{
+	width: 80%; /*60px;*/
+	height: auto; /*20px;*/
+	padding: 5px 16px;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	border-style: solid;
+    border-width: 1px;
+	color: #513b26;
+	border-color: #ddb385 #dca36c #db904f;
+	background: #fab778;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fcca94), to(#f9a55c));
+	background: -moz-linear-gradient(top, #fcca94,  #f9a55c);
+	background: linear-gradient(#fcca94, #f9a55c);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	 }
+.buy_now:hover
+	{
+	border-color: #d2aa7e #d19c68 #d0894b;
+	background: #fbca98;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fddfba), to(#fab371));
+	background: -moz-linear-gradient(top, #fddfba,  #fab371);
+	background: linear-gradient(#fddfba, #fab371);
+	}
+
+.fonsterputsning {
+	display: inline-block;
+	border: 1px solid;
+	border-color: #E7E7E7;
+	margin: 10px;
+}
+/*-------------------------------------------------------------*/
+/*-------- FIN LISTA DE PRECIOS DE TODOS LOS SERVICIOS--------*/
+/*-----------------------------------------------------------*/
+
+
+footer {
+	max-width: 1000px;
+	width: 95%;
+	margin:0 auto; 
+	display: block;
+	background: #395827;
+	border: 1px solid #CCCCCC;
+	box-shadow: 0px 3px 20px #699F48;
+	margin-bottom: 30px;
+	margin-top: 20px !important
+}
+
+footer p {
+	padding: 2px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;	
+	font-family: Verdana;
+	font-size: 12px;
+	line-height: 20px; /* espacion entre lineas de texto */
+}
+
+.over {
+	display: block;				/* ancla inicio*/
+   	position: fixed;
+   	bottom: 20px;
+   	right: 20px;
+   	z-index: 999;
+   	box-shadow: 0px 3px 20px #797979;
+}
+
+.over a{
+	text-decoration: none;
+}
+
+.over span {
+	color: #008241;
+	font-size: 20px;
+	background: transparent;
+}
+
+
+.error-404 {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	z-index: 1;
+	margin: 20px auto;
+	overflow: hidden;
+	background: #fff;
+	padding: 28px;
+	-webkit-box-shadow: 0px 3px 20px #699f48;
+			box-shadow: 0px 3px 20px #699f48;
+}
+.error-404 .img-404 img {
+	width: 50%;
+	max-width: 500px;
+	display: block;
+	float: left;
+
+	padding: 20px;
+	color: #000000;
+}
+.error-404 .view-404txt {
+	width: 50%;
+	display: block;
+	float: right;
+	padding: 20px;
+	/*font-family: Verdana;*/
+	color: #000000;
+}
+.error-404 .view-404txt h1 {
+	font-size: 25px;
+	color: #000000;
+	padding-bottom: 20px;
+	font-family: verdana;
+}
+.error-404 .view-404txt p.message {
+	font-size: 25px;
+	color: #333333;
+	/*text-align: justify;*/
+	line-height: 30px; /* espacion entre lineas de texto */
+}
+.error-404 .view-404txt a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding-top:187px; /*ya no es 80 es 180px*/
+		position: relative; /* para que se mueva todo el header cuando se hace el scroll*/
+	}
+
+	header .kontaktsup {
+		top:0;
+		left: 10px;
+		position: absolute; /* si lo regreso a fixed el header .kontaktsup se hace estatico*/
+		background: #FFFFFF;
+		display: block;
+	}
+
+	header  .kontaktsup .logo img {
+		width: 100%;
+	}
+
+	header .kontaktsup .kontakt a {
+		padding-left: 50px;
+	}
+
+	header .kontaktsup .kontakt a:hover {
+		border-bottom-style: none;
+	}
+
+	header .kontaktsup .kontakt #ring_oss, .kontaktsup .kontakt #maila_oss, .kontaktsup .kontakt #facebook, 
+			.kontaktsup .kontakt #twitter{
+		display: block;
+		padding: 5px;
+	}
+
+	.main_bar {
+		display:block;
+		width:100%;
+		position: absolute; /* si lo regreso a fixed el .main_bar se hace estatico*/
+		top:127px;
+		background:#395827;
+	}
+
+	.main_bar .bt-main {
+		display: block;
+		padding: 10px; /*ya no es 20 es 10*/
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+		font-family: Verdana;
+
+	}
+
+	.main_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 187px); /*ya no es 80px si no 180px por que suma .kontaktsup + nav*/
+		position: absolute; /* si lo regreso a fixed el header nav se hace estatico*/
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+	
+	/* texto dentro del slide */
+	.slides h1 {
+	font-family: sans-serif;
+	color: #FFFFFF;
+	font-size: 14px; 
+	position: absolute; 
+	left: 20px;
+	top: 20px;
+	padding: 10px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+	}
+
+	/* bloque section */
+	.section, .load-content-omoss, .load-content-priser {
+		width:90%;
+	}
+
+	.section_title {
+		font-size: 16px;
+	}
+
+	.columns h2, .load-content-omoss h2, .load-content-priser h2, .section-acordeon h2 {
+		font-size: 14px;
+	}
+
+	.columns p, .load-content-omoss p, .load-content-priser p, .section-acordeon p {
+		font-size: 12px;
+	}
+
+	form {
+	width: 100%;
+	margin-bottom: 10px;	
+	}
+	
+	.adress {
+		width: 100%;
+	}
+
+	.mapa {
+		display: none;
+	}
+
+	/*---------------------*/
+	/**** INICIO OM OSS, PRISER ***/
+	/*-------------------*/
+
+	.main-container {
+		width:100%;
+	}
+
+	.main-omoss li, .main-priser li {
+		display: inline-block;
+		position: relative;
+		margin: 0px auto;
+		padding-left: 5px;
+	}
+
+	/*---------------------*/
+	/***** FIN OM OSS *****/
+	/*-------------------*/
+
+/*---------------------------------------------------------*/
+/*-------- LISTA DE PRECIOS DE TODOS LOS SERVICIOS--------*/
+/*-------------------------------------------------------*/
+	.load-content-priser{width:100%;}
+
+	.price_table {height: auto;}
+
+	.price_table .price_time, .price_table .price_time_1{
+		width: 100%; /*100% dentro de load-content-priser*/
+	}
+
+	.price_table .price_time .column_1 {
+		font-size: 12px;
+		width: 40%;
+		margin-left: 15px;
+		margin-right: 15px;
+		clear: right;
+	}
+
+	.price_table .price_time_1 .column_1 {
+		width: 20%;
+	}
+
+	.price_table .price_time_1 .column_1 .pack-title{
+		font-size: 11px;
+	}
+
+	.price_table .price_time_1 .column_1 .header_row_1{height: 80px;}
+
+	.price_table .row_style_1 span, .price_table .row_style_2 span{font-size:9px;}	
+
+	.price_table .row_style_footer_1, .price_table .row_style_footer_2{font-size:9px;}
+
+	.buy_now{padding: 5px 5px;}
+/*-------------------------------------------------------------*/
+/*-------- FIN LISTA DE PRECIOS DE TODOS LOS SERVICIOS--------*/
+/*-----------------------------------------------------------*/
+
+}

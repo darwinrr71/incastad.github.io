@@ -1,0 +1,40 @@
+<%- include('../../partials/head'); %>
+<%- include('../../partials/hometitle'); %>
+<%- include('../../partials/navbar'); %>
+<section class="contenido">
+    <section class="kontaktaoss">
+        <h1>Vi ser fram emot att göra dig nöjd!</h1>
+        <article>
+            <form action="https://formsubmit.co/incastad@hotmail.com" name="kontaktaoss" method="post">
+                <label for="meddelande">Meddelande<span class="required">*</span></label>
+                <textarea id="meddelande" name="meddelande" placeholder="Ange din meddelande" required></textarea>
+                <input type="submit" id="skicka" value="Skicka" required>
+
+                <!-- API PARA ENVIAR CORREOS-->
+                <input type="hidden" name="_next" value="https://incastad.ddns.net">
+                <input type="hidden" name="_captcha" value="false">
+                <!-- API PARA ENVIAR CORREOS-->
+            </form>
+        </article>
+        <article class="adress">
+            <h2>Kontakta oss</h2>
+            <p>Har du en fråga gällande företaget och våra tjänster eller vill du ha en offert? För att vi på ett snabbt
+                och
+                enkelt sätt ska kunna ge dig hjälp kan du fylla i dina uppgifter nedan. Vi behandlar ditt mail och
+                återkommer så fort vi kan med uppgifter.</p>
+            <p>
+                Adress : <span>xxxxxxxxxxxxxx</span><br>
+                Movil : <span>0123456789</span><br>
+                E-mail : <span>incastad@hotmail.com</span><br>
+            </p>
+        </article>
+        <article class="mapa">
+            <!--solo quitar los cuatro nueves y saldra la direccion correcta -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!99991m18!1m12!1m3!1d2043.0338408244218!2d17.6074638!3d59.19873210000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f12824bcf8ecb%3A0x8e34dfcb38d6dffa!2sKarlslundsgatan+30%2C+151+63+S%C3%B6dert%C3%A4lje%2C+Suecia!5e0!3m2!1ses!2sse!4v1428018198754"
+                frameborder="0" style="border:0">
+            </iframe>
+        </article>
+    </section>
+</section>
+<%- include('../../partials/footer'); %>

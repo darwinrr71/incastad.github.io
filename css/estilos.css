@@ -8,6 +8,9 @@
 
 body {background:#FFFFFF;}
 
+html{
+	scroll-behavior: smooth;
+}
 .container_principal {
 	width:100%;
 	max-width: 1000px;
